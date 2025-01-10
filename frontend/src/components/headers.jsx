@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Headers = ({ type }) => {
     return (
-        <div className="px-10 flex-col justify-center">
+        <div className=" flex-col justify-center">
             <div className="text-3xl font-extrabold">
                 {type === "signup" ? "Create an Account" : "Log in To your Account"}
             </div>

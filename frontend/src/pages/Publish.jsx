@@ -1,7 +1,7 @@
 //pages/publish.jsx
 
 import { AppBar } from "../components/Appbar"
-import { Editortiny } from "../components/tinytext"
+import { Editortiny } from "../components/Tinytext"
 
 
 export const Publish = () => {

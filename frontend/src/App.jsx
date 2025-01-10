@@ -6,7 +6,7 @@ import { Signin } from './pages/Signin'
 import { Blog } from './pages/Blog'
 import { Blogs } from './pages/Blogs'
 import { Signup } from './pages/Signup'
-import Publish from './pages/Publish';
+import {Publish} from './pages/Publish';
 
 function App() {
 
