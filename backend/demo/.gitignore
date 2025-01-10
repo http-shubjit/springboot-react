@@ -12,14 +12,13 @@ target/
 .settings
 .springBeans
 .sts4-cache
-*.yml
-*.log
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-/htmlReport
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -32,4 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-application.properties

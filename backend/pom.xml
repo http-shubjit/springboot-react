@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
+<version>2.7.18</version>		
+<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springboot-react</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-react</name>
-	<description>Demo project for Spring Boot</description>
+	<description>springboot+react JournalApp</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -61,11 +61,11 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
+	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
+   </dependency>
+		
 		<dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-mail</artifactId>
