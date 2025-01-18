@@ -8,6 +8,7 @@ export default defineConfig({
       '/api': { // Adjust the path if your API endpoint is different
         target: 'http://localhost:8080', // Replace with your server's URL
         changeOrigin: true,
+         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
