@@ -9,7 +9,6 @@ import GoogleButton from 'react-google-button'
 export const Auth = ({ type }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
 
     const navigate = useNavigate();
     async function signIn() {
@@ -56,19 +55,15 @@ export const Auth = ({ type }) => {
                         <LabelledInput
                         label="Username"
                         type={"text"}
-                        placeholder="username"
+                        placeholder="jhondoe@gmail.com"
                         onChange={(e) => {setUsername(e.target.value)}}
                        />
                    
-                        <LabelledInput
-                        label="Email"
-                        type={"email"}
-                        placeholder="email"
-                        onChange={(e) => setEmail(e.target.value)}/>
+                       
                         <LabelledInput
                         label=" Password"
                         type={"password"}
-                        placeholder="password "
+                        placeholder="jhon@123 "
                         onChange={(e) => {setPassword(e.target.value);}}
                                 />
                         <button
@@ -79,17 +74,21 @@ export const Auth = ({ type }) => {
                         </button>
                         <label className="flex justify-center mb-2 text-sm font-medium text-gray-900">  Or</label><span className="flex justify-center py-2">  <GoogleButton onClick={handleGoogleLogin} /></span> </>
                             : 
-                       <> <LabelledInput
-                        label="Email"
-                        type={"email"}
-                        placeholder="email"
-                        onChange={(e) => setEmail(e.target.value)}
-                         />
-                    <LabelledInput
-                        label="Password"
+                <> 
+                   <LabelledInput
+                        label="Username"
+                        type={"text"}
+                        placeholder="jhondoe@gmail.com"
+                        onChange={(e) => {setUsername(e.target.value)}}
+                       />
+                   
+                       
+                        <LabelledInput
+                        label=" Password"
                         type={"password"}
-                        placeholder="password"
-                        onChange={(e) => { setPassword(e.target.value) }} />
+                        placeholder="jhon@123 "
+                        onChange={(e) => {setPassword(e.target.value);}}
+                                />
                     <button
                         onClick={signIn}
                         type="button"
