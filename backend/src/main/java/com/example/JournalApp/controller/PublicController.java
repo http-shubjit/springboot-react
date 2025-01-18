@@ -47,8 +47,7 @@ public class PublicController {
     @PostMapping("/signup")
     public ResponseEntity<Boolean> signUp(@RequestBody UserDTO user) {
         User newUser = new User();
-        newUser.setEmail(user.getEmail());
-        newUser.setUserName(user.getUserName());
+        newUser.setUsername(user.getUsername());
         newUser.setPassword(user.getPassword());
         boolean createdUser = userService.saveNewUser(newUser);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
@@ -59,8 +58,8 @@ public class PublicController {
 
         try {
             authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword()));
-            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUserName());
+                    new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
+            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
             String jwt = jwtUtil.generateToken(userDetails.getUsername());
             return new ResponseEntity<>(jwt, HttpStatus.OK);
         } catch (Exception e) {

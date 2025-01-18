@@ -80,8 +80,7 @@ try {
         } catch (Exception e) {
 
             User user = new User();
-            user.setUserName(email);
-            user.setEmail(email);
+            user.setUsername(email);
             user.setPassword(passwordEncoder.encode(UUID.randomUUID().toString()));
             user.setRoles(Arrays.asList("USER"));
             userRepository.save(user);

@@ -60,7 +60,7 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
         User userInDb = userService.findByUserName(userName);
-        userInDb.setUserName(user.getUserName());
+        userInDb.setUsername(user.getUsername());
         userInDb.setPassword(passwordEncoder.encode(user.getPassword()));
 
         userService.saveUser(userInDb);

@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepository.findByUserName(username);
         if (user != null) {
             return org.springframework.security.core.userdetails.User.builder()
-                    .username(user.getUserName())
+                    .username(user.getUsername())
                     .password(user.getPassword())
                     .roles(user.getRoles().toArray(new String[0]))
                     .build();
