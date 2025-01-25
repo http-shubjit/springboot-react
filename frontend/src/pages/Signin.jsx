@@ -3,13 +3,11 @@ import { Quote } from "../components/Quote"
 
 export const Signin = () => {
     return <div>
-        <div className="grid lg:grid-cols-2">
+        <div className="flex min-h-full flex-1 flex-col justify-center px-6  lg:px-8" >
             <div>
                 <Auth type="signin" />
             </div>
-            {/* <div className="hidden lg:block">
-                <Quote></Quote>
-            </div> */}
+            
         </div>
     </div>
 }
