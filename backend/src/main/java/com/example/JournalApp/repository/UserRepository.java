@@ -9,6 +9,6 @@ import com.example.JournalApp.entity.User;
 
 @Repository
 public interface UserRepository extends MongoRepository<User,ObjectId>{
-    User findByUserName(String username);
+    User findByUsername(String username);
 
 }

@@ -53,7 +53,7 @@ public class PublicController {
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
-    @PostMapping("/login")
+    @PostMapping("/signin")
     public ResponseEntity<?> login(@RequestBody User user) {
 
         try {
